@@ -30,84 +30,94 @@ export default function Home() {
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6 text-center">
-            <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">2+</div>
+            <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">14+</div>
             <div className="text-gray-600 dark:text-gray-300">Databases Reviewed</div>
           </div>
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6 text-center">
-            <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">1+</div>
-            <div className="text-gray-600 dark:text-gray-300">Use Case Guides</div>
+            <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">35+</div>
+            <div className="text-gray-600 dark:text-gray-300">Databases Catalogued</div>
           </div>
           <div className="bg-white dark:bg-gray-800 rounded-lg shadow p-6 text-center">
-            <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">1M+</div>
-            <div className="text-gray-600 dark:text-gray-300">Phages Catalogued</div>
+            <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">15M+</div>
+            <div className="text-gray-600 dark:text-gray-300">Viral Sequences</div>
           </div>
         </div>
 
         {/* Featured Databases */}
         <section className="mb-16">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-            Featured Databases
+            Database Reviews (14 Total)
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* BFVD Card */}
-            <Link href="/databases/bfvd" className="block">
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 h-full">
-                <div className="flex items-start justify-between mb-3">
-                  <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    BFVD
-                  </h4>
-                  <span className="px-2 py-1 text-xs font-medium bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded">
-                    Structures
-                  </span>
-                </div>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  162,000 AlphaFold-predicted phage protein structures
-                </p>
-                <div className="space-y-2 text-sm">
-                  <div className="flex items-center text-green-600 dark:text-green-400">
-                    <span className="mr-2">✓</span>
-                    <span>85% high confidence structures</span>
-                  </div>
-                  <div className="flex items-center text-yellow-600 dark:text-yellow-400">
-                    <span className="mr-2">⚠</span>
-                    <span>90% lack functional annotations</span>
-                  </div>
-                </div>
-                <div className="mt-4 text-blue-600 dark:text-blue-400 font-medium">
-                  Read full review →
-                </div>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <Link href="/databases/bfvd" className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow p-4">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-1">BFVD</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">162K AlphaFold phage structures</p>
             </Link>
-
-            {/* PhageScope Card */}
-            <Link href="/databases/phagescope" className="block">
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 h-full">
-                <div className="flex items-start justify-between mb-3">
-                  <h4 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    PhageScope
-                  </h4>
-                  <span className="px-2 py-1 text-xs font-medium bg-blue-200 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">
-                    Genomes
-                  </span>
-                </div>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  873,718 phage sequences with comprehensive annotations
-                </p>
-                <div className="space-y-2 text-sm">
-                  <div className="flex items-center text-green-600 dark:text-green-400">
-                    <span className="mr-2">✓</span>
-                    <span>Largest aggregated database</span>
-                  </div>
-                  <div className="flex items-center text-green-600 dark:text-green-400">
-                    <span className="mr-2">✓</span>
-                    <span>Lifestyle & host predictions</span>
-                  </div>
-                </div>
-                <div className="mt-4 text-blue-600 dark:text-blue-400 font-medium">
-                  Read full review →
-                </div>
-              </div>
+            <Link href="/databases/uniprot" className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow p-4">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-1">UniProt</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">Gold standard protein annotations</p>
             </Link>
+            <Link href="/databases/vogdb" className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow p-4">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-1">VOGDB</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">400K viral orthologous groups</p>
+            </Link>
+            <Link href="/databases/ncbi-viral" className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow p-4">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-1">NCBI Viral</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">Authoritative genome repository</p>
+            </Link>
+            <Link href="/databases/imgvr" className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow p-4">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-1">IMG/VR</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">15M+ metagenomic viruses</p>
+            </Link>
+            <Link href="/databases/pfam" className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow p-4">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Pfam</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">20K+ protein domain families</p>
+            </Link>
+            <Link href="/databases/pdb" className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow p-4">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-1">PDB</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">Experimental protein structures</p>
+            </Link>
+            <Link href="/databases/inphared" className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow p-4">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-1">InPhared</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">Consistent phage annotations</p>
+            </Link>
+            <Link href="/databases/phaster" className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow p-4">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-1">PHASTER</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">Prophage finding tool</p>
+            </Link>
+            <Link href="/databases/millardlab" className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow p-4">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-1">MillardLab</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">Experimental host range data</p>
+            </Link>
+            <Link href="/databases/phagesdb" className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow p-4">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-1">PhagesDB</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">30K+ actinobacteriophages</p>
+            </Link>
+            <Link href="/databases/pharokka" className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow p-4">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Pharokka</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">Modern annotation pipeline</p>
+            </Link>
+            <Link href="/databases/prophage-db" className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow p-4">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Prophage-DB</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">356K prophage sequences</p>
+            </Link>
+            <Link href="/databases/phagescope" className="bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow p-4">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-1">PhageScope</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">873K aggregated sequences</p>
+            </Link>
+          </div>
+          <div className="text-center">
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Plus 20+ more databases catalogued - see DATABASE_CATALOG.md
+            </p>
+            <a
+              href="https://github.com/Leran10/phage-database-guide/blob/main/DATABASE_CATALOG.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              View Full Catalog
+            </a>
           </div>
         </section>
 
